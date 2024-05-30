@@ -1,0 +1,140 @@
+:root{
+    --main-background-color: white;
+    --main-text-color: black;
+    --secundary-background-color: black;
+    --secundary-text-color: white;
+--shadow-color: black;
+
+}
+
+body{
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    box-sizing: border-box;
+}
+h1{
+    color: var(--secundary-text-color)
+}
+
+
+nav{
+    display: flex;
+    gap: 50px;
+}
+nav a{
+    color: var(--main-text-color);
+    transition: all 1s;
+}
+
+nav a:hover{
+    background: var(--secundary-background-color);
+    color: var(--secundary-text-color);
+}
+
+nav .active{
+    text-decoration: line-through;
+}
+a{
+    text-decoration: none;
+}
+
+.hero-container {
+    display: flex;
+    height: 100vh;
+
+}
+
+
+.column-one, .column-two{
+    width: 50%;
+}
+
+.column-one{
+    background: url('https://images.pexels.com/photos/2092041/pexels-photo-2092041.jpeg?auto=compress&cs=tinysrgb&w=600');
+background-position: center center;
+background-size: cover;
+background-repeat: no-repeat;
+
+}
+
+.column-two{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    box-sizing: border-box;
+}
+.cards-container{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+    flex-wrap: wrap;
+}
+.card{
+    width: 300px;
+    border-radius: 5px;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 var(--shadow-color);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.card-image{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.card-text{
+    padding: 10px 20px
+}
+
+.card:hover{
+    box-shadow: 0 8px 18px 0 var(--shadow-color);
+}
+
+.footer{
+    
+color: var(--secundary-text-color);
+    text-align: center;
+
+}
+
+
+
+
+
+
+@media (width < 600px){
+    header{
+        flex-flow: column;
+        color: var(--secundary-text-color);
+        background: var(--secundary-background-color);
+        padding-bottom: 10px;
+    }
+    .column-one{
+        display: none;
+
+    }
+    .column-two{
+        width: 100%;
+        background: url('https://images.pexels.com/photos/2092041/pexels-photo-2092041.jpeg?auto=compress&cs=tinysrgb&w=600');
+background-position: center center;
+background-size: cover;
+background-repeat: no-repeat;
+color: var(--secundary-text-color);
+    }
+
+    nav a{
+        color: var(--secundary-text-color);
+    }
+}
